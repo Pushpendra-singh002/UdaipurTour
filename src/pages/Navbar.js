@@ -3,7 +3,7 @@ import React from 'react'
 function Navbar() {
   return (
     <div>
-      <div className='logo fixed-top'><h4><b>Keen Tour</b></h4></div>
+      <div className='logo fixed-top'><h4><b>Keen Tour`s and Travel</b></h4></div>
     </div>
   )
 }
