@@ -32,7 +32,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navbar/> } />
-      <Route path="/packagesedit/:id" element={<Packagesupdate/>}/>
+        <Route path="/packagesedit/:id" element={<Packagesupdate/>}/>
         <Route path='/car/:id' element={<CarUpdate/>}/>
         <Route path="/signup" element={<Signup/>} />
         <Route path="/Dashboard" element={<Dashboard />} />

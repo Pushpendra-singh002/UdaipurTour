@@ -28,11 +28,10 @@ function Packages() {
   
    const filteredData = data.filter(
     (item) =>
-      // item.username.toLowerCase().includes(searchTerm.toLowerCase()) ||
-   ( item.name && item.name.toLowerCase().includes(searchTerm.toLowerCase()))||
-    item.price.toString().toLowerCase().includes(searchTerm.toLowerCase)||
-      item.facility.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+        (item.name && item.name.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        item.price.toString().toLowerCase().includes(searchTerm.toLowerCase()) 
+);
+
    const records = filteredData.slice(firstIndex, lastIndex);
    const npage = Math.ceil(filteredData.length / recordsperPage)
    const numbers = [ ...Array(npage + 1).keys()].slice(1)
@@ -92,7 +91,7 @@ function Packages() {
       console.log(res.data.data)
       setData(res.data.data)
     })
-  },[])
+  })
   useEffect(()=>{
     axios.get('http://localhost:5002/packages',{withCredentials: true})
   
@@ -216,10 +215,10 @@ function Packages() {
           </thead>
           <tbody>
             {records.map((item, index) => (
-              <tr key={index}>
-                <td>
+              <tr key={index} >
+              
                 <td><img src={`http://localhost:5002/${item.imageUrl}`} style={{width:"100px", height:"100px", border:"1px solid", borderRadius:"5px" , marginBottom:"10px"}} alt='....'></img></td>
-                </td>
+                
                 <td>
                  {item.name}
                 </td>
