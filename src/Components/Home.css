@@ -1,0 +1,392 @@
+@keyframes slideAndFade {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  }
+  #carousel{
+    height: 300px;
+  }
+
+
+.carousel-caption{
+  color:black;
+}
+.carousel-caption:hover{
+  color: black;
+}
+
+
+.faded-image {
+  opacity: 0.5;
+}
+
+
+.custom-caption {
+  position: absolute;
+  /* top: 50%;
+  left: 50%; */
+  transform: translate(-0%, -50%);
+  text-align: center;
+  color: black; 
+  display: flex; 
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+}
+
+.custom-caption h1 {
+  /* font-size: 3rem;  */
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+  margin: 0; 
+  padding: 0; 
+  /* width: 100%;  */
+  text-align: center; 
+}
+
+.custom-caption h4 {
+  /* font-size: 1.5rem; */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+   /* max-width: 90%;  */
+  text-align: center; 
+  /* line-height: 1.5; */
+}
+
+.parent{
+  display: flex;
+  width: 100%;
+  height: auto;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.child{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ 
+  color:#071049;
+}
+.flip-card {
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  
+}
+
+.flip-card-back {
+  background-color: #4ac4f3;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.icon{
+  font-size: 4.5rem; 
+  margin-bottom: 0.5rem;
+  color: whitesmoke;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color:black;
+}
+
+.main{
+  position: relative;
+  z-index: 2;
+  padding: 40px; 
+}
+
+.main::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 0;
+  padding-bottom: 30px;
+  width: 100%;
+  height: 100%;
+  background-image: url('../Images/background.jpg');
+  background-size: cover;
+  background-position: cover;
+  background-repeat: no-repeat;
+  opacity: 0.2; 
+  z-index: -1; 
+}
+
+.text-section1{
+  position: relative;
+  z-index: 2;
+  padding: 20px; 
+}
+
+.text-section1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4ac4f3;
+  background-size: cover;
+  background-position: cover;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  z-index: -1; 
+}
+
+
+
+
+/* 
+ h2 {
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  position: relative;
+  margin: 30px 0 60px;
+}
+
+h2::after {
+  content: "";
+  width: 100px;
+  position: absolute;
+  margin: 0 auto;
+  height: 3px;
+  background: #8fbc54;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel {
+  margin: 50px auto;
+  padding: 0 70px;
+}
+
+.carousel .carousel-item {
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  min-height: 290px;
+}
+
+.carousel .img-box {
+  width: 135px;
+  height: 135px;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+.carousel .img-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+}
+
+.carousel .testimonial {
+  padding: 30px 0 10px;
+}
+
+.carousel .overview {
+  font-style: italic;
+}
+
+.carousel .overview b {
+  text-transform: uppercase;
+  color: #7AA641;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+  background-size: 100%, 100%;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+}
+
+.carousel-control-prev-icon::after {
+  content: "\2039";
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control-next-icon::after {
+  content: "\203a";
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  margin: 1px 3px;
+  border-radius: 50%;
+  background: #999;
+  border: none;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-indicators .active {
+  background: #555;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+} */
+
+
+/* Testimonials Section */
+#testimonials-section h2.testimonials-heading {
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  position: relative;
+}
+#testimonials-section h2.testimonials-heading:hover{
+  color: #4ac4f3;
+}
+
+
+
+#testimonialsCarousel {
+  margin: 50px auto;
+  padding: 0 70px;
+}
+
+#testimonialsCarousel .carousel-item {
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+  overflow: hidden;
+  min-height: 290px;
+}
+.p{
+  color:#4ac4f3;
+}
+.p:hover{
+  color: #333;
+}
+
+#testimonialsCarousel .testimonials-img-box {
+  width: 135px;
+  height: 135px;
+  margin: 0 auto;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+#testimonialsCarousel .testimonials-img-box img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+}
+
+#testimonialsCarousel .testimonials-text {
+  padding: 30px 0 10px;
+}
+
+#testimonialsCarousel .testimonials-overview {
+  font-style: italic;
+}
+
+#testimonialsCarousel .testimonials-overview b {
+  text-transform: uppercase;
+  color: #333;
+}
+
+#testimonialsCarousel .carousel-control-prev-icon,
+#testimonialsCarousel .carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+  background-size: 100%, 100%;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+}
+
+#testimonialsCarousel .carousel-control-prev-icon::after {
+  content: "\2039";
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#testimonialsCarousel .carousel-control-next-icon::after {
+  content: "\203a";
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+#testimonialsCarousel .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  margin: 1px 3px;
+  border-radius: 50%;
+  background: #999;
+  border: none;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#testimonialsCarousel .carousel-indicators .active {
+  background: #555;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+

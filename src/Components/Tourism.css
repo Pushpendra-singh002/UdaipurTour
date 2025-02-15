@@ -1,0 +1,106 @@
+/* Custom Styles for the Cards */
+.horizontal-card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ddd;
+  }
+  
+  .big-card {
+    border: 1px solid #ddd;
+    height: 100%;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  
+ 
+  .card-img-top {
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  
+  .text-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  
+  .text-section p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify;
+  }
+
+  
+  
+
+  .heading{
+    display: flex;
+    justify-content: start;
+    color:#4ac4f3 ;
+  }
+  .heading:hover{
+    color: #333;
+  }
+
+
+  
+  .text-section h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #4ac4f3;
+  }
+  
+
+  .text-section p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+  }
+  
+  
+  
+  .row.align-items-center {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .row.align-items-center {
+      flex-direction: row !important;
+    }
+  }
+
+  .pac {
+    transition: transform 0.3s ease-in-out; 
+  }
+  
+  .pac:hover {
+    transform: translateY(-10px); 
+    animation: bounce 0.5s infinite alternate ease-in-out;
+  }
+  
+ 
+   @keyframes bounce {
+    0% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+   

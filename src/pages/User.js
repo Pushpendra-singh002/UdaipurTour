@@ -42,7 +42,7 @@ function User() {
         setEmail(storedEmail);
       } else if (id) {
         try {
-          const res = await axios.get(`http://localhost:5001/api/user/${id}`);
+          const res = await axios.get(`http://localhost:5002/api/user/${id}`);
           setName(res.data.username);
           setPhone(res.data.phone);
           setEmail(res.data.email);
@@ -66,7 +66,7 @@ function User() {
     const fetchCarDetails = async () => {
       setLoading(true);
       try {
-        const res = await axios.get(`http://localhost:5001/api/carrental/${id}`);
+        const res = await axios.get(`http://localhost:5002/api/carrental/${id}`);
         const packages = res.data.data || {};
         setItem({
           carname: packages.carname || "",
@@ -87,7 +87,7 @@ function User() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`http://localhost:5001/api/users`, {
+      await axios.post(`http://localhost:2/api/users`, {
         username: name,
         email,
         phone,

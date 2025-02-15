@@ -36,21 +36,21 @@ function Singlepage() {
        },[id])
   return (
     <div className='singlepagediv'>
-    <div className='singlepage'>
+    <div className='singlepage' style={{width:"100%", color:"black"}}>
       <h1>Details page</h1>
       {item ? (
         
         <div className='parent'>
          
           
-     <div className='child-home-4' style={{width:"60%"}}>
-          <img src={`http://localhost:5002/${item.imageUrl}`} alt="item"
+     <div className='child-home-4' style={{width:"60%" }}>
+          <img src={`http://localhost:5002/${item.imageUrl}`}alt="item"
           style={{width:"100%",height:'300px'}}
           className='item CARCSS'
           />
           <h1>{item.carname} on Rent in Udaipur</h1>
           <h5><b>Starting from INR  {item.price}/Day</b></h5>
-          <Link className='btn btn-primary' to={`/user/${id}`}>Book Now</Link>
+          <Link className='btn btn-primary' to={`/users/${id}`}>Book Now</Link>
           <p><b>{item.desc}</b></p>
           <p><b>{item.seater}</b></p>
           <h1>{item.carheading} Features:</h1>

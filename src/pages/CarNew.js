@@ -149,10 +149,10 @@ function CarNew() {
       <Navbar/>
       <Layout/>
 
-         <div classNamecar='content' style={{marginTop:"50px"}}>
+         <div className='content' style={{marginTop:"50px"}}>
             <div className='d-flex justify-content-center align-item-center'>
-              <h1 style={{marginTop:"20px"}}>Car Rental</h1>
               <div >
+              <h1 style={{marginTop:"20px", marginLeft:"40px"}} className=''>Car Rental</h1>
                 <form className='form'>
                 <div className="mb-3">
                      <label htmlFor="carname" className="htmlForm-label">Carname:</label><br></br>
@@ -368,11 +368,11 @@ function CarNew() {
           <th>Car Name</th>
           <th>Price</th>
           {/* <th>Facility</th> */}
-          <th>Car Heading</th>
+          {/* <th>Car Heading</th> */}
           <th> Update</th>
           <th>Delete</th>
           <th>View</th>
-          <th>list</th>
+          {/* <th>list</th> */}
         </tr>
       </thead>
       <tbody>
@@ -392,7 +392,7 @@ function CarNew() {
             <td>{item.carname}</td>
             <td>{item.price}</td>
             {/* <td>{item.facility}</td> */}
-            <td>{item.carheading}</td>
+            {/* <td>{item.carheading}</td> */}
             
             <td>
               <Link
@@ -437,19 +437,19 @@ function CarNew() {
                 <b>Read More</b>
               </Link>
             </td>
-            <td><td>
+            <td>
   {Array.isArray(item.carOptionsList) &&
     item.carOptionsList.map((car, index) => (
       <div key={index}>
-        <b>{car.type}</b>
-        <b style={{ marginLeft: "10px" }}>{car.list}</b>
+        {/* <b>{car.type}</b> */}
+        {/* <b style={{ marginLeft: "10px" }}>{car.list}</b> */}
         
       </div>
       
     ))
     }
 </td>
-</td>
+
               
           </tr>
         ))}

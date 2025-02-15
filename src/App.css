@@ -184,8 +184,8 @@ body, html {
   .singlepage{
     width: 100%;
     height:100%;
-    background-color:#209CFF;
-    background-image: linear-gradient(to bottom right, #209CFF, #68E0CF);
+    /* background-color:#209CFF;
+    background-image: linear-gradient(to bottom right, #209CFF, #68E0CF); */
   }
   .CARCSS{
     /* aspect-ratio: 3/2; */
@@ -198,9 +198,6 @@ body, html {
   color: #E9FCFF;
   width: 100%;
   height: 100%;
-  background-color: #032a4a;
-  /* background-image: linear-gradient(to bottom right, #0F1C46, #E9FCFF); */
-  background-image: linear-gradient(to bottom right, #209CFF, #68E0CF);
   
 
 }
@@ -210,6 +207,7 @@ body, html {
   mix-blend-mode: darken;
   /* mix-blend-mode:color-burn ; */
 }
+
 .user{
   background-color: rgb(155, 215, 240);
   padding: 10px;

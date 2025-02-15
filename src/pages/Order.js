@@ -100,7 +100,7 @@ function Order() {
        
 <div className="">
   {records.length > 0 ? (
-    <table className="table table-striped">
+    <table className="table table-striped " style={{overflowX:"auto"}} >
       <thead>
         <tr>
           

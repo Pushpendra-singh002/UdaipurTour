@@ -1,0 +1,27 @@
+.cardetails{
+    color: #4ac4f3;
+}
+.cardetails:hover{
+    color:black;
+}
+
+.text{
+    color:#4ac4f3;
+  }
+  .text:hover{
+    color:black;
+  }
+
+  .h2{
+    color:black;
+    }
+  .h2:hover{
+    color:#4ac4f3;
+  }
+
+  .review{
+    display: flex;
+    justify-content: start;
+  }
+
+  

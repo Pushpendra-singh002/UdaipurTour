@@ -27,7 +27,7 @@ const Layout = () => {
    }
   return (
    <div>
-    <div className="navbar-div" >
+    <div className="navbar-div" style={{height:"100%"}} >
       {/* Mobile Toggle Button */}
      
       <div className="mobile-navbar-btn " onClick={toggleSidebar}>

@@ -1,0 +1,103 @@
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    transition: background-color 0.3s ease-in-out; 
+    background-color:#4ac4f3 ;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar-nav {
+    margin-left: auto; 
+  
+}
+
+.nav-item {
+    margin: 0 10px; 
+    font-size: 16px;
+    font-weight: 500;
+    color:white;
+    text-decoration:  #e14141; 
+    position: relative;
+    transition: color 0.3s ease-in-out;
+    
+}
+
+
+.nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #e14141; /* Default link color */
+    position: relative; /* For hover animation */
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+
+.nav-link:hover {
+    color: #ff0000; /* Red color on hover */
+    text-decoration: none;
+    transform: translateY(-3px); /* Move link slightly upwards */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth animation for hover */
+}
+
+
+.nav-link.active,
+.nav-link[aria-current="page"] {
+    color: #ff0000; 
+    font-weight: bold;
+    border-bottom: 2px solid #ff0000; 
+    text-decoration: none;
+}
+
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; 
+    width: 100%;
+    height: 2px;
+    color: black;
+    background-color:whitesmoke; 
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1); 
+    transform-origin: right;
+}
+
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        margin-left: 0; /* Center links for mobile */
+        text-align: center;
+    }
+    .nav-item {
+        margin: 10px 0; /* Space out items vertically */
+    }
+    .btn-outline-dark {
+        display: block;
+        margin: 10px auto; /* Center logout button on mobile */
+    }
+}
+
+
+.navbar.scrolled {
+    background-color: #ffffff; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+
+.logo {
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar.scrolled .logo {
+    width: 100px;
+    height: 90px;
+}

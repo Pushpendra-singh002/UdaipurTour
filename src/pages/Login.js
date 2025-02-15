@@ -53,7 +53,7 @@ setFormData({
             } else {
               alert('login successful');
               // navigate(`/user/${userId}`);
-              navigate('/home')
+              navigate('/')
             }
           })
           .catch(profileErr => {
