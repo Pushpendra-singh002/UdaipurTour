@@ -339,7 +339,7 @@ function CarNew() {
                           value={carheading}
                             onChange={handlecarheading}
                                 required   autoComplete="off"
-                       id="carheading" placeholder="Enter carheading" carname="carheading" style={{width:"100%", border:'1px solid'}}/>
+                       id="carheading" placeholder="Enter Full Car Name " carname="carheading" style={{width:"100%", border:'1px solid'}}/>
                 </div>
                
                 

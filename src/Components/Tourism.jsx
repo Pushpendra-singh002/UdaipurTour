@@ -19,8 +19,14 @@ import Tourism7 from '../Images/Tourism7.jpg'
 import Tourism8 from '../Images/Tourism8.jpg'
 import Tourism9 from '../Images/Tourism9.jpg'
 import { FaAngleDoubleRight , FaHome } from "react-icons/fa";
-
+// import axios from 'axios';
+// import { useParams } from 'react-router-dom';
+// import { useEffect, useState } from 'react';
+import Reviewdetails from './Reviewdetails'
 function Tourism() {
+  
+  
+ 
   return (
     <div>
     <Navbar/>
@@ -218,8 +224,11 @@ function Tourism() {
 </div>
 
 </div>
-
-
+<br></br>
+<br></br>
+<hr style={{color:"blue"}}></hr>
+<br></br>
+<Reviewdetails/>
 
        </div>
       {/* </main close> */}

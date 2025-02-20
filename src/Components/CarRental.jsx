@@ -141,7 +141,7 @@ function CarRental() {
 
       {/*CarRental Details */}
       <br></br>
-      <div>
+      <div style={{marginBottom:"50px"}}>
 
       <h2 className='h2'><b>Car Rental in Udaipur</b></h2>
 
@@ -151,12 +151,12 @@ function CarRental() {
         <p className='child'><IoMdPerson />Clean & Well Car</p>
         <p className='child'><IoMailOpenOutline />Customize</p>
       </div>
-
-     <div className="rental-summary-card">
-  <div className="row">
-    <div className="col-md-8 content-section">
-      <div className="content">
-        <h6 className="title">Rental Summary</h6>
+</div>
+     <div className="container-fluid">
+  <div className="row d-flex justify-content-center">
+    <div className="col-md-7 " style={{backgroundColor:"rgb(0, 0, 0,0.2)", display:"flex", justifyContent:"center", borderRadius:"10px", padding:"20px"}}>
+      <div className="content1">
+        <h6 className="">Rental Summary</h6>
         <br></br>
         <ul className="rental-list">
         <li>Car type booked will have space for your luggage.</li>
@@ -169,14 +169,16 @@ function CarRental() {
     <div className="col-md-4 image-section">
       <img
         src={Car}
-        className="img-fluid rounded-start rental-image"
-        alt="Rental Car"
+        className="img-fluid rounded"
+        alt="Rental Car" 
+        
       />
     </div>
   </div>
      </div>
-      </div>
+     
       {/* CarRental Details close */}
+
 
       {/* Car details */}
       <div id="main" className='main1'>
@@ -184,129 +186,50 @@ function CarRental() {
       <h1><b>Book Your Car Today!</b></h1>
       <br></br>
       <p><b>Discover our top-notch selection of featured car models, tailored to meet every travel need in Udaipur</b></p>
-      <div className='container-fluid' >
-      <div className='row'>
-
-
-      {data && data.length > 0 ? (
-  data.map((item, index) => (
-    <div className="col-md-3" key={index} style={{ width: "350px" ,marginBottom:"20px",marginRight:"30px",  borderRadius:"5px", boxShadow:"0 4px 8px 0 rgba(0,0,0,0.9)", transition:"0.3s"}}>
-      <img
-        src={`http://localhost:5002/${item.imageUrl}`}
-        className="carrental"
-        alt={item.carname || "Car"}
-        style={{ height: "200px", width: "300px" , mixBlendMode:"darken"}}
-      />
-      <h4 className="h3">
-        <b>{item.carname}</b>
-      </h4>
-      <p>{item.seater}</p>
-      <h5 className="h">
-        <b>Starting from INR{item.price}</b>
-      </h5> 
-      <span style={{marginRight:"50px", marginTop:"20px", marginLeft:"20px"}}>
-        
-      <a href="tel:+1-555-555-1212">
-        <button type="button" className="btn btn-outline-info">
-          <b>CALL NOW</b>
-        </button>
-      </a></span>
-      {/* <div
-        className="bottom right-100 p-3 whatsapp-container"
-        style={{ zIndex: "6", left: "initial" }}
-      > */}
-        <a
-          href="https://wa.me/9001897580?text=Hello How can I help you?"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button type="button" className="btn btn-outline-info">
-            <b>WHATSAPP</b>
-          </button>
-        </a>
-        
-      {/* </div> */}
-      <Link
-                to={`/cardetails/${item._id}`}
-                className="btn btn-info"
-                style={{
-                  backgroundColor: "#4ac4f3", marginTop: "20px", 
-                  width: "100%", padding: "10px", borderRadius: "5px",
-                  marginBottom:"20px"
-                }}
-              >
-                <b>View Details</b>
-              </Link>
-     
-    </div>
-  ))
-      ) : (
-  <p>No data</p>
-      )}
-
-
-
-    
-
-
-
-      
-
-  
-
-  </div>
-
-
-
-      <br></br>
-      {/* <div className='col-md-3'>
-      <img src="https://carrentalinudaipur.in/wp-content/uploads/2024/10/toyota-fortuner-transparent.png" style={{height:"200px",width:"300px"}} className="carrental" alt="creta" />
-       <h4 className='h3'><b>Hyundai Creta</b></h4>
-       <p>4 seater car for you</p>
-       <h5 className='h'><b>Starting from INR 2000</b></h5>
-      <a href="tel:+1-555-555-1212">
-      <button type="button" class="btn btn-outline-info">CALL NOW</button> 
-      </a>
-    <div className='bottom right-100 p-3 whatsapp-container' style={{zIndex:"6", left:"initial"}}>
-  <a href="https://wa.me/9001897580?text=Hello How can I help you?" target="_blank" rel="noreferrer">
-  <button type="button" class="btn btn-outline-info">WHATSAPP</button>
-  </a>
-    </div>
-        <button type="button" className="btn btn-lg "  onClick={() => window.location.href =`/carrental/details`}>View Details</button>
-      </div> */}
-      <br></br>
-      {/* <div className='col-md-3'>
-      <img src="https://carrentalinudaipur.in/wp-content/uploads/2024/10/mahindra-thar-transparent-1.webp" style={{height:"200px",width:"300px"}} className="carrental" alt="creta" />
-       <h4 className='h3'><b>Hyundai Creta</b></h4>
-       <p>4 seater car for you</p>
-       <h5 className='h'><b>Starting from INR 2000</b></h5>
-      <a href="tel:+1-555-555-1212">
-      <button type="button" class="btn btn-outline-info">CALL NOW</button> 
-      </a>
-    <div className='bottom right-100 p-3 whatsapp-container' style={{zIndex:"6", left:"initial"}}>
-  <a href="https://wa.me/9001897580?text=Hello How can I help you?" target="_blank" rel="noreferrer">
-  <button type="button" class="btn btn-outline-info">WHATSAPP</button>
-  </a>
-    </div>
-        <button type="button" className="btn btn-lg "  onClick={() => window.location.href =`/carrental/details`}>View Details</button>
-      </div> */}
-      <br></br>
-      {/* <div className='col-md-3'>
-      <img src="https://carrentalinudaipur.in/wp-content/uploads/2024/10/hyundai-creta-car-transparent-1.webp" style={{height:"200px",width:"300px"}} className="carrental" alt="creta" />
-       <h4 className='h3'><b>Hyundai Creta</b></h4>
-       <p>4 seater car for you</p>
-       <h5 className='h'><b>Starting from INR 2000</b></h5>
-      <a href="tel:+1-555-555-1212">
-      <button type="button" class="btn btn-outline-info">CALL NOW</button> 
-      </a>
-    <div className='bottom right-100 p-3 whatsapp-container' style={{zIndex:"6", left:"initial"}}>
-  <a href="https://wa.me/9001897580?text=Hello How can I help you?" target="_blank" rel="noreferrer">
-  <button type="button" class="btn btn-outline-info">WHATSAPP</button>
-  </a>
-    </div>
-        <button type="button" className="btn btn-lg "  onClick={() => window.location.href =`/carrental/details`}>View Details</button>
-      </div> */}
-      </div>
+      <div className="container " >
+               <div className="row justify-content-center">
+                 {data && data.length > 0 ? (
+                   data.map((item, index) => (
+                     <div
+                       className="col-md-3 card p-3 m-2 shadow-sm"
+                       key={index}
+                       style={{ width: "300px" ,backgroundColor:"rgb(0, 0, 0,0.2)"}}
+                     >
+                       <img
+                         src={`http://localhost:5002/${item.imageUrl}`}
+                         className="img-fluid rounded"
+                         alt={item.carname}
+                         style={{ height: "200px", objectFit: "cover" }}
+                       />
+                       <h4 className="mt-2"><b>{item.carname}</b></h4>
+                       <p>{item.seater}</p>
+                       <h5><b>Starting from INR {item.price}</b></h5>
+                       <div className="d-flex justify-content-between mt-3">
+                         <a href="tel:+1-555-555-1212" className="btn btn-outline-info">
+                           <b>CALL NOW</b>
+                         </a>
+                         <a
+                           href="https://wa.me/9269573303?text=Hello How can I help you?"
+                           target="_blank"
+                           rel="noreferrer"
+                           className="btn btn-outline-info"
+                         >
+                           <b>WHATSAPP</b>
+                         </a>
+                       </div>
+                       <Link
+                         to={`/cardetails/${item._id}`}
+                         className="btn btn-info mt-3 w-100"
+                       >
+                         <b>View Details</b>
+                       </Link>
+                     </div>
+                   ))
+                 ) : (
+                   <p className="text-center">No data available</p>
+                 )}
+               </div>
+             </div>
       </div>
 
       </div>

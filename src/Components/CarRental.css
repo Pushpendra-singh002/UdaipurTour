@@ -111,21 +111,22 @@
     display: flex;
     justify-content: right;
     align-items: center;
+  
     
   }
   
   .rental-summary-card .rental-image {
    
     height: auto;
-    border-radius: 8px;
+    border-radius: 20px,0,20px,0;
   }
 
-  .content {
+  /* .content1 {
    
     display: flex;
     flex-direction: column; 
     align-items: center; 
-  }
+  } */
   
   .title {
     font-size: 1.5rem;

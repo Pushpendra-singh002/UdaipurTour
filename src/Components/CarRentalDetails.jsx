@@ -14,7 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
 function CarRentalDetails() {
-     const { id, } = useParams() || {}  
+  const { id, } = useParams() || {} 
 
      const [item, setItem] = useState({
       carname:"",
@@ -30,7 +30,46 @@ function CarRentalDetails() {
    
      const [loading, setLoading] = useState(false);
      const [error, setError] = useState(null);
-    
+     const [username, setusername] = useState(""); 
+       const [comment, setComment] = useState(""); 
+       const [rating, setRating] = useState(1);   
+       const [title , setTitle] = useState('')
+       
+
+        const handleSubmits = async (e) => {
+          e.preventDefault();
+        
+          // Ensure the user has entered both a username and a comment
+          if (!username || !comment || !title) {
+            alert("Please enter your username and a comment.");
+            return;
+          }
+        
+          // Prepare the data to send
+          const newReview = { username, comment, rating , title};
+        
+          try {
+            // Send data to the backend
+            const response = await axios.post("http://localhost:5002/api/customer", newReview);
+        
+            // Handle the response if needed (e.g., show success message or log response)
+            console.log("Review added successfully:", response.data);
+           navigator('/udaipurtourism')
+            // Add the new review to the UI state
+            setData([...data, newReview]);
+        
+            // Clear the form fields
+            setusername("");
+            setComment("");
+            setTitle('')
+            setRating(1); // Reset rating to 1
+          } catch (error) {
+            console.error("Error adding review:", error);
+            alert("An error occurred while submitting your review. Please try again.");
+          }
+        };
+
+  
        
    useEffect(() => {
        const fetchUserData = async () =>{
@@ -145,31 +184,18 @@ function CarRentalDetails() {
       
      }
    
-     const renderStars = (rating) => {
-      return "★".repeat(rating) + "☆".repeat(5 - rating); 
-    };
-  
-    
-    const getRatingLabel = (rating) => {
-      const labels = ["Poor", "Fair", "Good", "Very Good", "Excellent"];
-      return labels[rating - 1];
-    };
-
-    const chunkArray = (arr, size) =>
-      arr.reduce((acc, _, i) => (i % size === 0 ? [...acc, arr.slice(i, i + size)] : acc), []);
-    const carouselChunks = chunkArray(data, 3); // Adjust size as needed
     
    
      return (
-    <div>
+    <div  style={{marginTop:"100px", background:"whitesmoke"}}>
     <Navbar/>
     {/* main */}
-     <div className='conatiner fluid' style={{marginTop:"100px"}}>
+     <div className='conatiner fluid'>
     <div className='row'>
 
-    <div className="col-md-6">
+    <div className="col-md-6" >
             <div className="row align-items-left">
-              <div className='card' style={{ width: "30rem", marginTop: "40px" }}>
+              <div className='' style={{marginTop:"40px",padding:"4rem",borderRadius:"5px", boxShadow:"0 4px 8px 0 rgba(0,0,0,0.9)",marginLeft:"5%" }}>
                 <h3 className='cardetails'>UDAIPUR CAR RENTAL BOOKING:</h3>
                 <br />
                 {item.carname ? (
@@ -193,7 +219,7 @@ function CarRentalDetails() {
     
     <div className='col-md-5'>
             <div className="row d-flex justify-content-between align-items-end">
-              <div className='card' style={{ width: "40rem", marginTop: "40px" }}>
+              <div style={{ marginTop: "40px", padding:"10px",boxShadow:"0 4px 8px 0 rgba(0,0,0,0.9)",marginLeft:"10px"}}>
                 <form className="col-md-12" onSubmit={handleSubmit}>
                   <h2 className="text">PLEASE FILL YOUR DETAILS HERE:</h2>
                   <br />
@@ -325,107 +351,79 @@ function CarRentalDetails() {
      </div>
      </div>
     {/* main close */}
-
+   <div className='d-flex justify-content-center align-item-center' >
+      {/* Form to Add data */}
+      
+      <form onSubmit={handleSubmits} style={{  marginBottom: "20px" , borderRadius:"5px", width:"380px",margin:"30px",padding:"20px", boxShadow:"0 4px 8px 0 rgba(0,0,0,0.9)"}}>
+    <h1>Add Review</h1>
+        <div className="mb-3" >
+          <label htmlFor="user">
+            <b>
+            username:
+            </b>
+            <input
+              type="text"
+              id="user"
+              value={username}
+              onChange={(e) => setusername(e.target.value)}
+              style={{ width: "300px",marginTop:"2px"}}
+            />
+          </label>
+        </div>
+        <div className="mb-3" >
+          <label htmlFor="comment">
+            <b>
+               Comment:
+            </b>
+            <textarea
+            id="comment"
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
+              style={{ width: "300px",   }}
+            />
+          </label>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="title">
+            <b>
+            Title:
+            </b>
+            <br></br>
+            <input
+            id="title"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              style={{ width: "300px",  }}
+            />
+          </label>
+        </div>
+        <div className="mb-3" >
+          <label htmlFor="rating">
+            <b>
+            Rating:
+            </b>
+            <br></br>
+            <select id="rating"
+              value={rating}
+              onChange={(e) => setRating(Number(e.target.value))}
+              style={{ width: "300px",  }}
+            >
+              <option value={1}>1 - Poor</option>
+              <option value={2}>2 - Fair</option>
+              <option value={3}>3 - Good</option>
+              <option value={4}>4 - Very Good</option>
+              <option value={5}>5 - Excellent</option>
+            </select>
+          </label>
+        </div>
+        <button type="submit" className="btn btn-info" style={{ padding: "5px 10px", cursor: "pointer" }}>
+          Submit Review
+        </button>
+      </form>
+      </div>
     {/* Review part */}
     
-    <div className='container'>
-    <div className="row align-items">
-    <div className="col-md-9 text-section">
-      <h3 className='heading'>What our customers say?</h3>
-      <button 
-        type="button" 
-        className="btn btn-lg btn-outline-light" 
-        style={{ color: '#4ac4f3' }}  
-        onClick={() => window.location.href = `/reviewdetails/${id}`}>
-        <b>FINISH YOUR REVIEW</b>
-      </button>
-      <p><i><b>Rajasthan's most popular tourist destination</b></i></p>
-    </div>
-    </div>
-    
-    {/* <div>
-        <h2>All data:</h2>
-        <br></br>
-       
-        {data.length === 0 ? (
-          <p>No data yet. Be the first to add one!</p>
-        ) : (
-          <ul style={{ listStyleType: "none", padding: 0 }}>
-            {data.map((review, index) => (
-              <li
-                key={index}
-                style={{
-                  
-                  padding: "10px",
-                  marginBottom: "10px",
-                }}
-              >
-            
-      {!review.hidden && (
-        <>
-        <strong>{review.username}</strong>
-        <p>{review.title}</p>
-          <p>{review.comment}</p>
-          <p>
-            Rating:{" "}
-            <span style={{ color: "#FFD700", fontSize: "18px" }}>
-              {renderStars(review.rating)}
-            </span>{" "}
-            ({getRatingLabel(review.rating)})
-          </p>
-        </>
-      )}
-                
-             
-             
-           
-              </li>
-              
-            ))}
-          </ul>
-        )}
-        <br></br>
-     
-    </div> */}
-
-    <div className='container-fluid'>
-  <div id="reviewCarousel" className="carousel slide" data-bs-ride="carousel">
-    <div className="carousel-inner">
-      {carouselChunks.map((chunk, index) => (
-        <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
-          <div className="row" style={{ padding: "20px",backgroundColor:"#f8f9fa", borderRadius:"5px", boxShadow:"0 4px 8px 0 rgba(0,0,0,0.9)", }}> 
-            {chunk.map((review, i) => (
-                <div className="col-md-4" key={i}>
-                <strong>{review.username}</strong>
-                <p>{review.title}</p>
-                  <p>{review.comment}</p>
-                  <p>
-                    Rating:{" "}
-                    <span style={{ color: "#FFD700", fontSize: "18px" }}>
-                      {renderStars(review.rating)}
-                    </span>{" "}
-                    ({getRatingLabel(review.rating)})
-                  </p>
-                </div>
-            ))}
-          </div>
-        </div>
-      ))}
-    </div>
-
-    {/* Carousel Controls */}
-    <button className="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
-      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span className="visually-hidden">Previous</span>
-    </button>
-    <button className="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
-      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-      <span className="visually-hidden">Next</span>
-    </button>
-  </div>
-</div>
-
-    </div> 
+   
  
     {/* Review close */}
 

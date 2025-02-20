@@ -42,15 +42,17 @@ function Singlepage() {
         
         <div className='parent'>
          
-          
-     <div className='child-home-4' style={{width:"60%" }}>
+        
+     <div className='child-home-4'>
+      <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+      <h5>carheading : {item.carheading}</h5><div>
           <img src={`http://localhost:5002/${item.imageUrl}`}alt="item"
           style={{width:"100%",height:'300px'}}
           className='item CARCSS'
           />
           <h1>{item.carname} on Rent in Udaipur</h1>
           <h5><b>Starting from INR  {item.price}/Day</b></h5>
-          <Link className='btn btn-primary' to={`/users/${id}`}>Book Now</Link>
+          <Link className='btn btn-primary' to={`/users/${id}`}>Book Now</Link></div></div>
           <p><b>{item.desc}</b></p>
           <p><b>{item.seater}</b></p>
           <h1>{item.carheading} Features:</h1>
@@ -110,7 +112,7 @@ function Singlepage() {
                </div>
               ))}</h5>
            
-          <h6>carheading : {item.carheading}</h6>
+         
           <div className='md-3'>
             <h1>Rental Terms</h1>
             <ul>

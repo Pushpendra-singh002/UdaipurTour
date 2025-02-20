@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import {Link} from "react-router-dom";
-import udaipur from '../Images/udaipur.jpg'
+import udaipur from '../Images/contect.jpg'
 import Tours1 from '../Images/Tours1.jpg'
 import { IoMdHappy } from "react-icons/io";
 import { MdSupportAgent } from "react-icons/md";
@@ -17,9 +17,9 @@ function Contact() {
       <Navbar/>
 
       {/* Image */}
-       <div className="full-page-image">
+       <div className="full-page-image" style={{height:'500px'}}>
   <a className="navbar-brand1" href="#nav">
-    <img src={udaipur} className="carrental" alt="package" />
+    <img src={udaipur} className="carrental" alt="package"  />
   </a>
       </div>
       {/* image close */}
@@ -116,12 +116,17 @@ function Contact() {
     </form>
 
     <div className="col-md-5 text-start address-section" style={{marginTop:"20px"}}>
-      <h3>Address</h3>
-      <p>Udaipur Tour's</p>
-      <p>2/210 - RHB Colony</p>
-      <p>Goverdhan Vilas, Udaipur, Rajasthan, INDIA - 313001 / 313002</p>
-      <p>Mobile: +91-9829787678.</p>
-    </div>
+    
+    
+    <h6 className="text-uppercase mb-4 font-weight-bold"> Address</h6>
+    <p>
+       3rd Floor, Mehta Sadan, Durga Nursery Rd, Near Sukhadiya Memorial, Udaipur, Rajasthan, 313001</p><br></br>
+    <p>
+       www.keeninfotech.com</p>
+    <p><br></br>
+      +91-7976496465, +91-9610032961</p>
+  </div>
+
   </div>
       </div>
       {/* form end */}

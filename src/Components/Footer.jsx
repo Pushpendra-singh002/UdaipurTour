@@ -1,8 +1,11 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom'
-
-
+import { FaSquareFacebook } from "react-icons/fa6";
+import { FaInstagramSquare } from "react-icons/fa";
+import { FaWhatsappSquare } from "react-icons/fa";
+import { BsFillBuildingsFill } from "react-icons/bs";
+import { BiLink } from "react-icons/bi";
 function Footer() {
   return (
     <div>
@@ -15,7 +18,7 @@ function Footer() {
       
       {/* Company Info / Logo */}
       <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-      <h6 className="text-uppercase mb-4 font-weight-bold"><i class="bi bi-buildings-fill"></i> UDAIPUR TOUR'S</h6>
+      <h6 className="text-uppercase mb-4 font-weight-bold"><BsFillBuildingsFill/> UDAIPUR TOUR'S</h6>
       <p>
         A tour of Udaipur offers breathtaking views of Lake Pichola, visits to iconic landmarks like the City Palace and Jag Mandir, 
         and a chance to experience traditional Rajasthani hospitality.
@@ -24,7 +27,7 @@ function Footer() {
 
       {/* Useful Links Section */}
       <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-  <h6 className="text-uppercase mb-4 font-weight-bold"> <i class="bi bi-link"></i>Quick Links</h6>
+  <h6 className="text-uppercase mb-4 font-weight-bold"><BiLink/>Quick Links</h6>
   <ul className="list-unstyled">
     <li>
       <Link
@@ -84,24 +87,28 @@ function Footer() {
       {/* Contact Information */}
       <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
     
-        <h6 className="text-uppercase mb-4 font-weight-bold">  <i class="bi bi-geo-alt-fill"></i>Address</h6>
-        <p><i className="fas fa-home mr-3"></i> 1234, Udaipur (Raj.)</p>
-        <p><i className="fas fa-envelope mr-3"></i> UdaipurTour's@gmail.com</p>
-        <p><i className="fas fa-phone mr-3"></i> 7976496465</p>
+        <h6 className="text-uppercase mb-4 font-weight-bold"> Address</h6>
+        <p>
+           3rd Floor, Mehta Sadan, Durga Nursery Rd, Near Sukhadiya Memorial, Udaipur, Rajasthan, 313001</p>
+        <p>
+           www.keeninfotech.com</p>
+        <p>
+          +91-7976496465, +91-9610032961</p>
       </div>
 
       {/* Social Media Links */}
       <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3" style={{ color: "white" }}>
-        <h6 className="text-uppercase mb-4 font-weight-bold"> <i class="bi bi-substack"></i> Follow Us</h6>
+        <h6 className="text-uppercase mb-4 font-weight-bold"> Follow Us</h6>
         <section className="mb-4">
           <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-            <i className="bi bi-facebook"></i>
+          <FaSquareFacebook/>
           </a>
           <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-            <i className="bi bi-instagram"></i>
+          <FaInstagramSquare/>
           </a>
           <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button">
-          <i class="bi bi-twitter-x"></i>
+          
+          <FaWhatsappSquare/>
           </a>
          
         </section>

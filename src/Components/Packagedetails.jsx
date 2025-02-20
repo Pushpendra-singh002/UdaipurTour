@@ -88,7 +88,7 @@ function Packagedetails() {
   
   
 return (
-    <div>
+    <div style={{background:"whitesmoke"}}>
     <Navbar/>
 
     {/* main */}
@@ -113,7 +113,7 @@ return (
     </div>
     <div className='col-md-5'>
     <div className="row d-flex justify-content-between align-items-end">
-    <div className='card' style={{width:"40rem", marginTop:"40px", paddingTop:"20px"}}>
+    <div className='' style={{ marginTop: "40px", padding:"10px",boxShadow:"0 4px 8px 0 rgba(0,0,0,0.9)",marginLeft:"10px"}}>
     <form className="col-md-12" onSubmit={handleSubmit}>
       <h2 className="text">PLEASE FILL YOUR DETAILS:</h2>
        <br></br>
