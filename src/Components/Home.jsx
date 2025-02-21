@@ -88,14 +88,14 @@ function Home() {
     </div>
     <div className="col-md-6 ">
       <div className="parent">
-    <div class="row row-cols-1 row-cols-md-2 g-4  ">
-  <div class="col child 
+    <div className="row row-cols-1 row-cols-md-2 g-4  ">
+  <div className="col child 
   ">
-  <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
+  <div className="flip-card">
+  <div className="flip-card-inner">
+    <div className="flip-card-front">
    
-      <img src={Package6} alt="Avatar" style={{width:"250px",height:"250px"}} />
+      <img src={Package6} alt="Avatar" style={{width:"250px",height:"230px",border:"4px rgb(129, 201, 218), outset"}} />
     </div>
     <div className="flip-card-back">
      <MdOutlineCardTravel className='icon'/>
@@ -108,13 +108,13 @@ function Home() {
   
   </div>
 
-  <div class="col child">
-  <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src={Car1} alt="Avatar" style={{width:"250px",height:"250px"}} />
+  <div className="col child">
+  <div className="flip-card">
+  <div className="flip-card-inner">
+    <div className="flip-card-front">
+      <img src={Car1} alt="Avatar" style={{width:"250px",height:"230px",border:"4px rgb(129, 201, 218), outset"}} />
     </div>
-    <div class="flip-card-back">
+    <div className="flip-card-back">
     <FaCar className='icon'/>
     <button type="button" className="btn btn-lg "  onClick={() => window.location.href =`/carrental`}><b>CAR AND TAXI RENTAL</b></button>
       <p>Local and outstation car</p> 
@@ -125,13 +125,13 @@ function Home() {
    
   </div>
 
-  <div class="col child">
-  <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src={Package7} alt="Avatar" style={{width:"250px",height:"250px"}} />
+  <div className="col child">
+  <div className="flip-card">
+  <div className="flip-card-inner">
+    <div className="flip-card-front">
+      <img src={Package7} alt="Avatar" style={{width:"250px",height:"230px",border:"4px rgb(129, 201, 218), outset"}} />
     </div>
-    <div class="flip-card-back">
+    <div className="flip-card-back">
     <FaHouseFloodWaterCircleArrowRight className='icon'/>
     <button type="button" className="btn btn-lg "  onClick={() => window.location.href =`/udaipurtourism`}><b>UDAIPUR TOURISM GUIDE</b></button>
       
@@ -143,13 +143,13 @@ function Home() {
    
   </div>
 
-  <div class="col child">
-  <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <img src={tour1} alt="Avatar" style={{width:"250px",height:"250px"}} />
+  <div className="col child">
+  <div className="flip-card">
+  <div className="flip-card-inner">
+    <div className="flip-card-front">
+      <img src={tour1} alt="Avatar" style={{width:"250px",height:"230px",border:"4px rgb(129, 201, 218), outset"}} />
     </div>
-    <div class="flip-card-back">
+    <div className="flip-card-back">
     <BsPersonFillAdd className='icon' />
     <button type="button" className="btn btn-lg "  onClick={() => window.location.href =`/contact`}><b>365⨯7 HELP DESK</b></button>
       
@@ -176,7 +176,7 @@ function Home() {
    <div className='container' style={{marginTop:"50px" ,display:"flex",justifyContent:"center", alignItems:"center", padding:"auto"}}>
    <div className="row align-items-center">
   <div className="col-md-6">
-    <img src={About} className="pac img-fluid" style={{height:"300px", padding:"20px"}} alt="package" />
+    <img src={About} className="pac img-fluid" style={{height:"285px", border:"4px rgb(129, 208, 225), outset"}} alt="package" />
   </div>
   <div className="col-md-6 text-section1">
     <h3 style={{color:"black"}}><b>Tourist Attractions in Udaipur & Sightseeing information</b></h3>
@@ -194,62 +194,62 @@ function Home() {
    {/* about second close */}
 
    {/*Testimonial  */}
-   <div class="container" id="testimonials-section">
-  <div class="row">
-    <div class="col-md-8 mx-auto text-center">
-      <h2 class="testimonials-heading">UDAIPUR TOURISM</h2>
+   <div className="container" id="testimonials-section">
+  <div className="row">
+    <div className="col-md-8 mx-auto text-center">
+      <h2 className="testimonials-heading">UDAIPUR TOURISM</h2>
       <p className='p'><i>A Preview of Udaipur Tourist Destinations</i></p>
-      <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div id="testimonialsCarousel" className="carousel slide" data-bs-ride="carousel">
       <br></br>
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <div className="carousel-indicators">
+          <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
 
-        <div class="carousel-inner"style={{padding:"20px"}}> 
-          <div class="carousel-item active">
-            <div class="testimonials-img-box">
+        <div className="carousel-inner"style={{padding:"20px"}}> 
+          <div className="carousel-item active">
+            <div className="testimonials-img-box">
               <img src={T} alt="" />
             </div>
-            <p class="testimonials-text" style={{padding:"20px"}}>"The Lake Palace was built in 1743-1746. It is made of marble and is situated on Jag Niwas island in Lake Pichola. 
+            <p className="testimonials-text" style={{padding:"20px"}}>"The Lake Palace was built in 1743-1746. It is made of marble and is situated on Jag Niwas island in Lake Pichola. 
             It was originally built as a royal summer palace, but is now a luxury 5 Star hotel,
             operating under the “Taj Hotels Resorts and Palaces” banner."
            </p>
-            <p class="testimonials-overview"><b>Lake Palace</b></p>
+            <p className="testimonials-overview"><b>Lake Palace</b></p>
             <p className='p'>Udaipur</p>
            
           <br></br>
           </div>
-          <div class="carousel-item" style={{padding:"20px"}}>
-            <div class="testimonials-img-box" >
+          <div className="carousel-item" style={{padding:"20px"}}>
+            <div className="testimonials-img-box" >
               <img src={Tourism2} alt="" />
             </div>
-            <p class="testimonials-text"> "Standing on the east bank of Lake Pichola is a massive series of palaces built at different times from 1559. 
+            <p className="testimonials-text"> "Standing on the east bank of Lake Pichola is a massive series of palaces built at different times from 1559. 
             The balconies of the palace provide panoramic views of the “Jag Niwas."</p>
-            <p class="testimonials-overview"><b>City Palace</b></p>
+            <p className="testimonials-overview"><b>City Palace</b></p>
             <p className='p'>Udaipur</p>
           </div>
-          <div class="carousel-item" style={{padding:"20px"}}>
-            <div class="testimonials-img-box" >
+          <div className="carousel-item" style={{padding:"20px"}}>
+            <div className="testimonials-img-box" >
               <img src={Tourism3} alt="" />
             </div>
-            <p class="testimonials-text">"Fateh Sagar Lake is situated in the north of Lake Picholas.
+            <p className="testimonials-text">"Fateh Sagar Lake is situated in the north of Lake Picholas.
              It was originally built by Maharana Jai Singh in the year 1678 AD, but later on reconstructed and extended by Maharana Fateh Singh after much destruction was caused by heavy rains. 
              In 1993-1994, the water vanished from the lake, but in 2005-2006, the lake regained its water."</p>
-            <p class="testimonials-overview"><b>Fateh Sagar Lake</b></p>
+            <p className="testimonials-overview"><b>Fateh Sagar Lake</b></p>
             <p className='p'>Udaipur</p>
           </div>
         </div>
       
         <br></br>
-        <button class="carousel-control-prev"  type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+        <button className="carousel-control-prev"  type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next"   type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+        <button className="carousel-control-next"   type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
         </button>
       </div>
     </div>

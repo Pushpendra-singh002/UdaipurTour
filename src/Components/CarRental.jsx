@@ -154,7 +154,7 @@ function CarRental() {
 </div>
      <div className="container-fluid">
   <div className="row d-flex justify-content-center">
-    <div className="col-md-7 " style={{backgroundColor:"rgb(0, 0, 0,0.2)", display:"flex", justifyContent:"center", borderRadius:"10px", padding:"20px"}}>
+    <div className="col-md-7 " style={{backgroundColor:"rgb(0, 0, 0,0.2)", display:"flex", justifyContent:"center", borderRadius:"10px", padding:"20px", marginBottom:"20px"}}>
       <div className="content1">
         <h6 className="">Rental Summary</h6>
         <br></br>

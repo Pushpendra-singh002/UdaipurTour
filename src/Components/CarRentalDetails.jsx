@@ -193,9 +193,9 @@ function CarRentalDetails() {
      <div className='conatiner fluid'>
     <div className='row'>
 
-    <div className="col-md-6" >
+    <div className="col-md-5" >
             <div className="row align-items-left">
-              <div className='' style={{marginTop:"40px",padding:"4rem",borderRadius:"5px", boxShadow:"0 4px 8px 0 rgba(0,0,0,0.9)",marginLeft:"5%" }}>
+              <div className='' style={{ marginTop:"40px",padding:"4rem",borderRadius:"5px", boxShadow:"0 4px 8px 0 rgba(0,0,0,0.9)",marginLeft:"5%" ,width:"400px"}}>
                 <h3 className='cardetails'>UDAIPUR CAR RENTAL BOOKING:</h3>
                 <br />
                 {item.carname ? (
@@ -219,7 +219,7 @@ function CarRentalDetails() {
     
     <div className='col-md-5'>
             <div className="row d-flex justify-content-between align-items-end">
-              <div style={{ marginTop: "40px", padding:"10px",boxShadow:"0 4px 8px 0 rgba(0,0,0,0.9)",marginLeft:"10px"}}>
+              <div style={{ marginTop: "40px", padding:"10px",boxShadow:"0 4px 8px 0 rgba(0,0,0,0.9)",marginLeft:"10px",}}>
                 <form className="col-md-12" onSubmit={handleSubmit}>
                   <h2 className="text">PLEASE FILL YOUR DETAILS HERE:</h2>
                   <br />

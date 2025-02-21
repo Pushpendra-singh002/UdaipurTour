@@ -124,7 +124,7 @@ function Contact() {
     <p>
        www.keeninfotech.com</p>
     <p><br></br>
-      +91-7976496465, +91-9610032961</p>
+    +91-9269573303</p>
   </div>
 
   </div>

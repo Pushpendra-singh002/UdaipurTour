@@ -8,7 +8,7 @@ import { BsFillBuildingsFill } from "react-icons/bs";
 import { BiLink } from "react-icons/bi";
 function Footer() {
   return (
-    <div>
+    <div className='bg-info'>
 
       {/* Footer Start */}
       <footer id="footer" className="footer text-center text-lg-start text-white" style={{ backgroundColor:"#4ac4f3" }}>
@@ -26,7 +26,7 @@ function Footer() {
       </div>
 
       {/* Useful Links Section */}
-      <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+      <div className="col-md-2 col-lg-3 col-xl-2 mx-auto mt-3">
   <h6 className="text-uppercase mb-4 font-weight-bold"><BiLink/>Quick Links</h6>
   <ul className="list-unstyled">
     <li>
@@ -79,6 +79,16 @@ function Footer() {
         Contact Us
       </Link>
     </li>
+    <li>
+      <Link
+        style={{ textDecoration: 'none', color: 'white' }}
+        onMouseEnter={(e) => (e.target.style.color = 'black')}
+        onMouseLeave={(e) => (e.target.style.color = 'white')}
+        to="/login"
+      >
+        login
+      </Link>
+    </li>
   </ul>
      </div>
 
@@ -93,11 +103,11 @@ function Footer() {
         <p>
            www.keeninfotech.com</p>
         <p>
-          +91-7976496465, +91-9610032961</p>
+          +91-9269573303</p>
       </div>
 
       {/* Social Media Links */}
-      <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3" style={{ color: "white" }}>
+      <div className="col-md-3 col-lg-3 col-xl-2 mx-auto mt-3" style={{ color: "white" }}>
         <h6 className="text-uppercase mb-4 font-weight-bold"> Follow Us</h6>
         <section className="mb-4">
           <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button">
@@ -119,7 +129,7 @@ function Footer() {
 
   {/* Footer Bottom Content */}
   <div className="text-center p-3" style={{ backgroundColor: "rgba(0, 0, 0, 0.2)", color: "white" }}>
-  © 2024 Copyright:
+  © 2025 Copyright:
   All Rights Reserved
 
   <a
